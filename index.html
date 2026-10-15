@@ -15,7 +15,7 @@
 <style>
 /* Layout: 1440px editorial column; paper bands alternate with ink bands; mono section labels with a rule; grotesk headlines with a serif-italic accent phrase. Light-only by design. */
 :root{
-  --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4; --line-2:#D9D5CA;
+  --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#5F5D55; --line:#C6C1B4; --line-2:#D9D5CA;
   --accent:oklch(0.52 0.17 35); --warm:oklch(0.74 0.14 50); --on-ink:#F3F0E8; --on-ink-2:#CBC8BE; --on-ink-3:#A3A096; --ink-line:#3A3935;
   --sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
   --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
@@ -404,8 +404,21 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
 .facts-light dd{margin:0;font-size:17px}
 .facts-light a{border-bottom:1px solid currentColor}
 </style>
+<style>
+/* Accessibility: skip link, visible field focus, 44px tap areas (hit area grows, layout does not) */
+.skip{position:absolute;left:12px;top:-64px;z-index:100;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--paper);font:500 14px var(--sans)}
+.skip:focus{top:12px}
+main:focus{outline:none}
+.fld input:focus,.fld textarea:focus,.fld select:focus{outline:none;border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
+.news-field:focus-within{border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
+.fld input,.fld select,.chip,.brand{min-height:44px}
+.foot-nav a,.sp-links a,.ul,h3>a{position:relative}
+.foot-nav a::before,.sp-links a::before,.ul::before,h3>a::before{content:"";position:absolute;inset:-10px -6px}
+@media (min-width:901px){.nav a:not(.pill){position:relative}.nav a:not(.pill)::before{content:"";position:absolute;inset:-12px -8px}}
+</style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 
 <header class="head">
   <div class="wrap head-row">
@@ -424,7 +437,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <section class="stagehero" aria-labelledby="hero-h">
     <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div class="sh-inner">
@@ -483,7 +496,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
         <div class="product">
           <div class="product-top mono"><span>Featured product</span><span>Founders Beta open</span></div>
           <h3>FlatPurse <span class="it">Flow</span></h3>
-          <div class="shot"><img src="assets/flatpurse-flow.png" alt="FlatPurse Flow dashboard showing today’s schedule and revenue recovered" loading="lazy"></div>
+          <div class="shot"><img src="assets/flatpurse-flow.png" width="1586" height="992" alt="FlatPurse Flow dashboard showing today’s schedule and revenue recovered" loading="lazy"></div>
           <p>Booking, payments and client follow-up for Canadian salons, barbershops, spas and massage clinics. Flow’s AutoPilot works in the background to fill gaps and bring clients back, so owners can stay on the floor.</p>
           <a class="pill pill-ink" href="https://flow.flatpurse.com" target="_blank" rel="noopener">Explore FlatPurse Flow ↗</a>
         </div>
@@ -687,7 +700,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
     <h2>Have an idea worth building? <span class="it">Let’s talk.</span></h2>
     <a class="pill mail" href="contact.html">Get in touch</a>
     <div class="foot-base">
-      <div class="foot-id"><span class="disc"><img src="assets/logo.png" alt="George Ogunbande logo"></span><span><b>George Ogunbande</b>© 2026 · Edmonton, Alberta</span></div>
+      <div class="foot-id"><span class="disc"><img src="assets/logo.png" alt="George Ogunbande logo" width="54" height="54"></span><span><b>George Ogunbande</b>© 2026 · Edmonton, Alberta</span></div>
       <nav class="foot-nav" aria-label="Footer">
         <div><span class="mono">Site</span><a href="about.html">About</a><a href="books.html">Books</a><a href="speaking.html">Speaking</a><a href="articles.html">Articles</a><a href="ventures.html">Ventures</a><a href="contact.html">Contact</a></div>
         <div><span class="mono">Books</span><a href="small-money-big-brand.html">Small Money, Big Brand</a><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a><a href="maya-the-mini-mogul.html">Maya the Mini Mogul</a><a href="books.html#bundle">All three · $49</a></div>
