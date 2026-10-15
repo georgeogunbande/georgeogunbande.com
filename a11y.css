@@ -1,0 +1,15 @@
+/* Shared accessibility layer, loaded last on every page.
+   - Darker muted text so small labels pass 4.5:1 on --paper-2
+   - Skip link and visible focus on text fields
+   - 44px tap areas: the clickable area grows, the layout does not */
+:root{--muted:#5F5D55}
+.skip{position:absolute;left:12px;top:-64px;z-index:100;display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--paper);font:500 14px var(--sans)}
+.skip:focus{top:12px}
+main:focus{outline:none}
+.fld input:focus,.fld textarea:focus,.fld select:focus{outline:none;border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
+.news-field:focus-within{border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
+.fld input,.fld select,.chip,.small-btn,.brand{min-height:44px}
+.foot-nav a,footer nav a,.sp-links a,.ul,.link,.crumbs a,.byline a,dd a,h3>a,li>a{position:relative}
+.foot-nav a::before,footer nav a::before,.sp-links a::before,.ul::before,.link::before,.crumbs a::before,.byline a::before,dd a::before,h3>a::before,li>a::before{content:"";position:absolute;inset:-12px -6px}
+.crumbs a::before{inset:-16px -6px}
+@media (min-width:901px){.nav a:not(.pill){position:relative}.nav a:not(.pill)::before{content:"";position:absolute;inset:-12px -8px}}

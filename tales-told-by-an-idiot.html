@@ -230,8 +230,10 @@ p{margin:0}
 .stamp{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:6px 14px;align-self:flex-start}
 </style>
 <link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="a11y.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Tales Told by an Idiot", "description": "Sixteen business screwups, and the Idiot Rules they left behind.", "image": "https://georgeogunbande.com/assets/cover-tales.jpg", "url": "https://georgeogunbande.com/tales-told-by-an-idiot.html", "bookFormat": "https://schema.org/Paperback", "inLanguage": "en", "author": {"@type": "Person", "name": "George Ogunbande", "url": "https://georgeogunbande.com/"}, "offers": {"@type": "Offer", "price": "19.99", "priceCurrency": "CAD", "availability": "https://schema.org/PreOrder", "url": "https://georgeogunbande.com/tales-told-by-an-idiot.html", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "10", "currency": "CAD"}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "CA"}}}}</script>
 
 <header class="site-head"><div class="wrap head-row">
@@ -239,7 +241,7 @@ p{margin:0}
 <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav class="nav" id="nav" aria-label="Main"><a href="about.html">About</a><a href="books.html" aria-current="page">Books</a><a href="speaking.html">Speaking</a><a href="articles.html">Articles</a><a href="ventures.html">Ventures</a><a href="contact.html">Contact</a><a class="btn btn-ink" href="speaking.html#enquiry">Book George</a></nav>
 </div></header>
-<main>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
 <span class="stamp">Pre-orders open · Ships in Canada</span>

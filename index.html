@@ -15,7 +15,7 @@
 <style>
 /* Layout: 1440px editorial column; paper bands alternate with ink bands; mono section labels with a rule; grotesk headlines with a serif-italic accent phrase. Light-only by design. */
 :root{
-  --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#5F5D55; --line:#C6C1B4; --line-2:#D9D5CA;
+  --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4; --line-2:#D9D5CA;
   --accent:oklch(0.52 0.17 35); --warm:oklch(0.74 0.14 50); --on-ink:#F3F0E8; --on-ink-2:#CBC8BE; --on-ink-3:#A3A096; --ink-line:#3A3935;
   --sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
   --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
@@ -404,18 +404,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
 .facts-light dd{margin:0;font-size:17px}
 .facts-light a{border-bottom:1px solid currentColor}
 </style>
-<style>
-/* Accessibility: skip link, visible field focus, 44px tap areas (hit area grows, layout does not) */
-.skip{position:absolute;left:12px;top:-64px;z-index:100;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--paper);font:500 14px var(--sans)}
-.skip:focus{top:12px}
-main:focus{outline:none}
-.fld input:focus,.fld textarea:focus,.fld select:focus{outline:none;border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
-.news-field:focus-within{border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
-.fld input,.fld select,.chip,.brand{min-height:44px}
-.foot-nav a,.sp-links a,.ul,h3>a{position:relative}
-.foot-nav a::before,.sp-links a::before,.ul::before,h3>a::before{content:"";position:absolute;inset:-10px -6px}
-@media (min-width:901px){.nav a:not(.pill){position:relative}.nav a:not(.pill)::before{content:"";position:absolute;inset:-12px -8px}}
-</style>
+<link rel="stylesheet" href="a11y.css">
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
