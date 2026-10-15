@@ -775,7 +775,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
 <script>
 (function(){
   var M=window.Motion;
-  if(!M||!M.animate||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(!M||!M.animate||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var sel='main > section:not(.stagehero) .wrap > *, .ink .wrap > *, .role, .art, .topics li, .cover, .news .wrap > *';
   var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest('.stagehero')});
   els.forEach(function(e){e.classList.add('mo')});
