@@ -404,8 +404,10 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
 .facts-light dd{margin:0;font-size:17px}
 .facts-light a{border-bottom:1px solid currentColor}
 </style>
+<link rel="stylesheet" href="a11y.css">
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 
 <header class="head">
   <div class="wrap head-row">
@@ -424,7 +426,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <section class="stagehero" aria-labelledby="hero-h">
     <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div class="sh-inner">
@@ -483,7 +485,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
         <div class="product">
           <div class="product-top mono"><span>Featured product</span><span>Founders Beta open</span></div>
           <h3>FlatPurse <span class="it">Flow</span></h3>
-          <div class="shot"><img src="assets/flatpurse-flow.png" alt="FlatPurse Flow dashboard showing today’s schedule and revenue recovered" loading="lazy"></div>
+          <div class="shot"><img src="assets/flatpurse-flow.png" width="1586" height="992" alt="FlatPurse Flow dashboard showing today’s schedule and revenue recovered" loading="lazy"></div>
           <p>Booking, payments and client follow-up for Canadian salons, barbershops, spas and massage clinics. Flow’s AutoPilot works in the background to fill gaps and bring clients back, so owners can stay on the floor.</p>
           <a class="pill pill-ink" href="https://flow.flatpurse.com" target="_blank" rel="noopener">Explore FlatPurse Flow ↗</a>
         </div>
@@ -687,7 +689,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
     <h2>Have an idea worth building? <span class="it">Let’s talk.</span></h2>
     <a class="pill mail" href="contact.html">Get in touch</a>
     <div class="foot-base">
-      <div class="foot-id"><span class="disc"><img src="assets/logo.png" alt="George Ogunbande logo"></span><span><b>George Ogunbande</b>© 2026 · Edmonton, Alberta</span></div>
+      <div class="foot-id"><span class="disc"><img src="assets/logo.png" alt="George Ogunbande logo" width="54" height="54"></span><span><b>George Ogunbande</b>© 2026 · Edmonton, Alberta</span></div>
       <nav class="foot-nav" aria-label="Footer">
         <div><span class="mono">Site</span><a href="about.html">About</a><a href="books.html">Books</a><a href="speaking.html">Speaking</a><a href="articles.html">Articles</a><a href="ventures.html">Ventures</a><a href="contact.html">Contact</a></div>
         <div><span class="mono">Books</span><a href="small-money-big-brand.html">Small Money, Big Brand</a><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a><a href="maya-the-mini-mogul.html">Maya the Mini Mogul</a><a href="books.html#bundle">All three · $49</a></div>
@@ -767,6 +769,8 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
   }
 })();
 </script>
+<script src="motion.js"></script>
+<script src="reveal.js"></script>
 <script src="checkout.js"></script>
 </body>
 </html>
